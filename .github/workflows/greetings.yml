@@ -1,4 +1,4 @@
-name: "Greeter Workflow"
+name: Greeter Workflow
 on:
   workflow_dispatch:
     inputs:
