@@ -1,0 +1,16 @@
+name: "Greeter Workflow"
+on:
+  workflow_dispatch:
+    inputs:
+      person_name:
+      default: 'Mona'
+      choice:
+        - Mad
+        - Dad
+    
+jobs:
+  greeter_job:
+    runs-on: ubuntu-latest
+    steps:
+        echo "Hello from ${{GITHUB_ACTOR}} to ${{ inputs.person_name}}"
+    
