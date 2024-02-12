@@ -10,7 +10,10 @@ on:
     
 jobs:
   greeter_job:
+    name: 'Hello'
     runs-on: ubuntu-latest
     steps:
-        echo "Hello from ${{GITHUB_ACTOR}} to ${{ inputs.person_name}}"
+      - name: 'greeter step'
+        run: |
+          echo "Hello from ${{GITHUB_ACTOR}} to ${{ inputs.person_name}}"
     
