@@ -4,16 +4,16 @@ on:
     inputs:
       person_name:
       default: 'Mona'
-      choice:
-        - Mad
-        - Dad
-    
+      type: choice
+      options:
+        - mad
+        - dad
+
 jobs:
   greeter_job:
     name: 'Hello'
     runs-on: ubuntu-latest
     steps:
       - name: 'greeter step'
-        run: |
-          echo "Hello from ${{GITHUB_ACTOR}} to ${{ inputs.person_name}}"
+        run: echo Hello there ${{GITHUB_ACTOR}} to ${{ inputs.person_name}}
     
